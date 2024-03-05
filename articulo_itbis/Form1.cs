@@ -45,12 +45,24 @@ namespace articulo_itbis
             double montoNeto = montoTotal - descuento + itbis;
            
             txt_Monto_neto.Text = montoNeto.ToString("0.00");
-            txt_Monto.Text = montoTotal.ToString("0.00");
             txt_Itbis.Text = itbis.ToString("0.00");
             txt_Descuento.Text = descuento.ToString("0.00");
 
 
         }
+
+         private void btn_Salir_Click(object sender, EventArgs e)
+ {
+     Close();
+ }
+
+ private void btn_Limpiar_Click(object sender, EventArgs e)
+ {
+     txt_Monto.Clear();
+     txt_Descuento.Clear();
+     txt_Itbis.Clear();
+     txt_Monto_neto.Clear();
+ }
 
       
     }
